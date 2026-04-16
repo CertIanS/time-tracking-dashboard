@@ -1,3 +1,58 @@
 body{
     font-family: 'Rubik';
+    background-color: hsl(226, 43%, 10%);
+    color: white;
+}
+
+p, a{
+    padding: 10px;
+}
+
+.person{
+    padding-bottom: 10px;
+}
+
+.person img{
+    border-radius: 50%;
+    border: 6px solid white;
+}
+
+.person, .work, .play, .study, .exercise, .social, .selfCare{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.personTitle{
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 20px;
+}
+
+#workBg, #playBg, #studyBg, #exerciseBg, #socialBg, #selfBg{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#workBg{
+    background-color: hsl(15, 100%, 70%);
+}
+
+#playBg{
+    background-color: hsl(195, 74%, 62%);
+}
+
+#studyBg{
+    background-color: hsl(348, 100%, 68%);
+}
+
+#exerciseBg{
+    background-color: hsl(145, 58%, 55%);
+}
+
+#socialBg{
+    background-color: hsl(264, 64%, 52%);
+}
+
+#selfBg{
+    background-color: hsl(43, 84%, 65%);
 }
