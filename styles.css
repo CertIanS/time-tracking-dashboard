@@ -8,8 +8,15 @@ p, a{
     padding: 10px;
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
 .person{
     padding-bottom: 10px;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 .person img{
@@ -20,7 +27,7 @@ p, a{
 .person, .work, .play, .study, .exercise, .social, .selfCare{
     background-color: hsl(235, 46%, 20%);
     border-radius: 20px;
-    margin-top: 15px;
+    margin: 15px;
 }
 
 .personTitle{
@@ -28,31 +35,52 @@ p, a{
     border-radius: 20px;
 }
 
-#workBg, #playBg, #studyBg, #exerciseBg, #socialBg, #selfBg{
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-#workBg{
+.work{
     background-color: hsl(15, 100%, 70%);
+    background-image: url("images/icon-work.svg");
+    background-repeat: no-repeat;
 }
 
-#playBg{
+.play{
     background-color: hsl(195, 74%, 62%);
+    background-image: url("images/icon-play.svg");
+    background-repeat: no-repeat;
 }
 
-#studyBg{
+.study{
     background-color: hsl(348, 100%, 68%);
+    background-image: url("images/icon-study.svg");
+    background-repeat: no-repeat;
 }
 
-#exerciseBg{
+.exercise{
     background-color: hsl(145, 58%, 55%);
+    background-image: url("images/icon-exercise.svg");
+    background-repeat: no-repeat;
 }
 
-#socialBg{
+.social{
     background-color: hsl(264, 64%, 52%);
+    background-image: url("images/icon-social.svg");
+    background-repeat: no-repeat;
 }
 
-#selfBg{
+.selfCare{
     background-color: hsl(43, 84%, 65%);
+    background-image: url("images/icon-self-care.svg");
+    background-repeat: no-repeat;
+}
+
+#workInfo, #playInfo, #studyInfo, #exerciseInfo, #socialInfo, #selfInfo{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 55px;
+}
+
+@media (min-width: 48em){
+    .container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
 }
