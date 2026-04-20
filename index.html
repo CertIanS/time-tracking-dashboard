@@ -6,7 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
+  <link href="./styles.css" rel="stylesheet">
+  <script defer src="./main.js"></script>
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
@@ -18,22 +19,16 @@
         <p>Report for</p>
         <p>Jeremy Robson</p>
       </div>
-      <a>Daily</a>
-      <a>Weekly</a>
-      <a>Monthly</a>
+      <button id="dailyButton">Daily</button>
+      <button id="weeklyButton">Weekly</button>
+      <button id="monthlyButton">Monthly</button>
     </div>
     <div class="work">
       <div id="workInfo">
         <p>Work</p>
         <!--Daily-->
-        <p>5hrs</p>
-        <p>Previous - 7hrs</p>
-        <!--Weekly-->
-        <p>32hrs</p>              
-        <p>Previous - 36hrs</p>
-        <!--Monthly-->
-        <p>103hrs</p>
-        <p>Previous - 128hrs</p>
+        <p id="workCurrent">5hrs</p>
+        <p id="workPrev">Yesterday - 7hrs</p>
       </div>
       
     </div>
@@ -41,14 +36,8 @@
       <div id="playInfo">
         <p>Play</p>
         <!--Daily-->
-        <p>1hr</p>
-        <p>Previous - 2hrs</p>
-        <!--Weekly-->
-        <p>10hrs</p>
-        <p>Previous - 8hrs</p>
-        <!--Monthly-->
-        <p>23hrs</p>
-        <p>Previous - 29hrs</p>
+        <p id="playCurrent">1hr</p>
+        <p id="playPrev">Yesterday - 2hrs</p>
       </div>
       
     </div>
@@ -56,42 +45,24 @@
       <div id="studyInfo">
         <p>Study</p>
         <!--Daily-->
-        <p>0hrs</p>
-        <p>Previous - 1hr</p>
-        <!--Weekly-->
-        <p>4hrs</p>
-        <p>Previous - 7hrs</p>
-        <!--Monthly-->
-        <p>13hrs</p>
-        <p>Previous - 19hrs</p>
+        <p id="studyCurrent">0hrs</p>
+        <p id="studyPrev">Yesterday - 1hr</p>
       </div>
     </div>
     <div class="exercise">
       <div id="exerciseInfo">
         <p>Exercise</p>
         <!--Daily-->
-        <p>1hr</p>
-        <p>Previous - 1hr</p>
-        <!--Weekly-->
-        <p>4hrs</p>
-        <p>Previous - 5hrs</p>
-        <!--Monthly-->
-        <p>11hrs</p>
-        <p>Previous - 18hrs</p>
+        <p id="exerciseCurr">1hr</p>
+        <p id="exercisePrev">Yesterday - 1hr</p>
       </div>
     </div>
     <div class="social">
       <div id="socialInfo">
         <p>Social</p>
         <!--Daily-->
-        <p>1hr</p>
-        <p>Previous - 3hrs</p>
-        <!--Weekly-->
-        <p>5hrs</p>
-        <p>Previous - 10hrs</p>
-        <!--Monthly-->
-        <p>21hrs</p>
-        <p>Previous - 23hrs</p>
+        <p id="socialCurr">1hr</p>
+        <p id="socialPrev">Yesterday - 3hrs</p>
       </div>
       
     </div>
@@ -99,14 +70,8 @@
       <div id="selfInfo">
         <p>Self Care</p>
         <!--Daily-->
-        <p>0hrs</p>
-        <p>Previous - 1hr</p>
-        <!--Weekly-->
-        <p>2hrs</p>
-        <p>Previous - 2hrs</p>
-        <!--Monthly-->
-        <p>7hrs</p>
-        <p>Previous - 11hrs</p>
+        <p id="selfCurrent">0hrs</p>
+        <p id="selfPrev">Yesterday - 1hr</p>
       </div>
       
     </div>

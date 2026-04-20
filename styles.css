@@ -78,6 +78,23 @@ p, a{
     margin-top: 55px;
 }
 
+#workInfo:hover, #playInfo:hover, #studyInfo:hover, #exerciseInfo:hover, #socialInfo:hover, #selfInfo:hover{
+    background-color: hsl(235, 45%, 61%);
+    cursor: pointer;
+}
+
+#dailyButton, #weeklyButton, #monthlyButton{
+    background: transparent;
+    border: none;
+    font-family: 'Rubik';
+    color: hsl(235, 45%, 61%);
+}
+
+#dailyButton:hover, #weeklyButton:hover, #monthlyButton:hover{
+    color: white;
+    cursor: pointer;
+}
+
 @media (min-width: 48em){
     .container{
         display: grid;
