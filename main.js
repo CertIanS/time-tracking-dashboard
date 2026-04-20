@@ -1,48 +1,64 @@
 var dailyBtn = document.getElementById("dailyButton");
 var weekBtn = document.getElementById("weeklyButton");
 var monthBtn = document.getElementById("monthlyButton");
+var jsonData = null;
 
 dailyBtn.addEventListener("click", function(e){
-    document.getElementById("workCurrent").textContent = "5hrs";
-    document.getElementById("workPrev").textContent = "Yesterday - 7hrs";
-    document.getElementById("playCurrent").textContent = "1hr";
-    document.getElementById("playPrev").textContent = "Yesterday - 2hrs";
-    document.getElementById("studyCurrent").textContent = "0hrs";
-    document.getElementById("studyPrev").textContent = "Yesterday - 1hr";
-    document.getElementById("exerciseCurr").textContent = "1hr";
-    document.getElementById("exercisePrev").textContent = "Yesterday - 1hr";
-    document.getElementById("socialCurr").textContent = "1hr";
-    document.getElementById("socialPrev").textContent = "Yesterday - 3hrs";
-    document.getElementById("selfCurrent").textContent = "0hrs";
-    document.getElementById("selfPrev").textContent = "Yesterday - 1hr";
+    //document.getElementById("workCurrent").textContent = "5hrs";
+    document.getElementById("workCurrent").textContent = jsonData[0].timeframes.daily.current + "hrs";
+    document.getElementById("workPrev").textContent = "Yesterday - " + jsonData[0].timeframes.daily.previous + "hrs";
+    document.getElementById("playCurrent").textContent = jsonData[1].timeframes.daily.current + "hr";
+    document.getElementById("playPrev").textContent = "Yesterday - " + jsonData[1].timeframes.daily.previous + "hrs";
+    document.getElementById("studyCurrent").textContent = jsonData[2].timeframes.daily.current + "hrs";
+    document.getElementById("studyPrev").textContent = "Yesterday - " + jsonData[2].timeframes.daily.previous + "hr";
+    document.getElementById("exerciseCurr").textContent = jsonData[3].timeframes.daily.current + "hr";
+    document.getElementById("exercisePrev").textContent = "Yesterday - " + jsonData[3].timeframes.daily.previous + "hr";
+    document.getElementById("socialCurr").textContent = jsonData[4].timeframes.daily.current + "hr";
+    document.getElementById("socialPrev").textContent = "Yesterday - " + jsonData[4].timeframes.daily.previous + "hrs";
+    document.getElementById("selfCurrent").textContent = jsonData[5].timeframes.daily.current + "hrs";
+    document.getElementById("selfPrev").textContent = "Yesterday - " + jsonData[5].timeframes.daily.previous + "hr";
 });
 
 weekBtn.addEventListener("click", function(e){
-    document.getElementById("workCurrent").textContent = "32hrs";
-    document.getElementById("workPrev").textContent = "Last week - 36hrs";
-    document.getElementById("playCurrent").textContent = "10hrs";
-    document.getElementById("playPrev").textContent = "Last week - 8hrs";
-    document.getElementById("studyCurrent").textContent = "4hrs";
-    document.getElementById("studyPrev").textContent = "Last week - 7hrs";
-    document.getElementById("exerciseCurr").textContent = "4hrs";
-    document.getElementById("exercisePrev").textContent = "Last week - 5hrs";
-    document.getElementById("socialCurr").textContent = "5hrs";
-    document.getElementById("socialPrev").textContent = "Last week - 10hrs";
-    document.getElementById("selfCurrent").textContent = "2hrs";
-    document.getElementById("selfPrev").textContent = "Last week - 2hrs";
+    document.getElementById("workCurrent").textContent = jsonData[0].timeframes.weekly.current + "hrs";
+    document.getElementById("workPrev").textContent = "Last week - " + jsonData[0].timeframes.weekly.previous + "hrs";
+    document.getElementById("playCurrent").textContent = jsonData[1].timeframes.weekly.current + "hrs";
+    document.getElementById("playPrev").textContent = "Last week - " + jsonData[1].timeframes.weekly.previous + "hrs";
+    document.getElementById("studyCurrent").textContent = jsonData[2].timeframes.weekly.current + "hrs";
+    document.getElementById("studyPrev").textContent = "Last week - " + jsonData[2].timeframes.weekly.previous + "hrs";
+    document.getElementById("exerciseCurr").textContent = jsonData[3].timeframes.weekly.current + "hrs";
+    document.getElementById("exercisePrev").textContent = "Last week - " + jsonData[3].timeframes.weekly.previous + "hrs";
+    document.getElementById("socialCurr").textContent = jsonData[4].timeframes.weekly.current + "hrs";
+    document.getElementById("socialPrev").textContent = "Last week - " + jsonData[4].timeframes.weekly.previous + "hrs";
+    document.getElementById("selfCurrent").textContent = jsonData[5].timeframes.weekly.current + "hrs";
+    document.getElementById("selfPrev").textContent = "Last week - " + jsonData[5].timeframes.weekly.previous + "hrs";
 });
 
 monthBtn.addEventListener("click", function(e){
-    document.getElementById("workCurrent").textContent = "103hrs";
-    document.getElementById("workPrev").textContent = "Last month - 128hrs";
-    document.getElementById("playCurrent").textContent = "23hrs";
-    document.getElementById("playPrev").textContent = "Last month - 29hrs";
-    document.getElementById("studyCurrent").textContent = "13hrs";
-    document.getElementById("studyPrev").textContent = "Last month - 19hrs";
-    document.getElementById("exerciseCurr").textContent = "11hrs";
-    document.getElementById("exercisePrev").textContent = "Last month - 18hrs";
-    document.getElementById("socialCurr").textContent = "21hrs";
-    document.getElementById("socialPrev").textContent = "Last month - 23hrs";
-    document.getElementById("selfCurrent").textContent = "7hrs";
-    document.getElementById("selfPrev").textContent = "Last month - 11hrs";
+    document.getElementById("workCurrent").textContent = jsonData[0].timeframes.monthly.current + "hrs";
+    document.getElementById("workPrev").textContent = "Last month - " + jsonData[0].timeframes.monthly.previous + "hrs";
+    document.getElementById("playCurrent").textContent = jsonData[1].timeframes.monthly.current + "hrs";
+    document.getElementById("playPrev").textContent = "Last month - " + jsonData[1].timeframes.monthly.previous + "hrs";
+    document.getElementById("studyCurrent").textContent = jsonData[2].timeframes.monthly.current + "hrs";
+    document.getElementById("studyPrev").textContent = "Last month - " + jsonData[2].timeframes.monthly.previous + "hrs";
+    document.getElementById("exerciseCurr").textContent = jsonData[3].timeframes.monthly.current + "hrs";
+    document.getElementById("exercisePrev").textContent = "Last month - " + jsonData[3].timeframes.monthly.previous + "hrs";
+    document.getElementById("socialCurr").textContent = jsonData[4].timeframes.monthly.current + "hrs";
+    document.getElementById("socialPrev").textContent = "Last month - " + jsonData[4].timeframes.monthly.previous + "hrs";
+    document.getElementById("selfCurrent").textContent = jsonData[5].timeframes.monthly.current + "hrs";
+    document.getElementById("selfPrev").textContent = "Last month - " + jsonData[5].timeframes.monthly.previous + "hrs";
 });
+
+function fetchJSONData(){
+    fetch("./data.json")
+    .then(response => {
+        if(!response.ok){
+            console.log("Error");
+        }
+        return response.json();
+    })
+    .then(data => jsonData = data)
+    .catch(error => console.error('Error: ', error));
+}
+fetchJSONData();
+const parsedData = JSON.parse(jsonData);
