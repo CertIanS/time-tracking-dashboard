@@ -17,6 +17,9 @@ dailyBtn.addEventListener("click", function(e){
     document.getElementById("socialPrev").textContent = "Yesterday - " + jsonData[4].timeframes.daily.previous + "hrs";
     document.getElementById("selfCurrent").textContent = jsonData[5].timeframes.daily.current + "hrs";
     document.getElementById("selfPrev").textContent = "Yesterday - " + jsonData[5].timeframes.daily.previous + "hr";
+    dailyBtn.disabled = true;
+    weekBtn.disabled = false;
+    monthBtn.disabled = false;
 });
 
 weekBtn.addEventListener("click", function(e){
@@ -32,6 +35,9 @@ weekBtn.addEventListener("click", function(e){
     document.getElementById("socialPrev").textContent = "Last week - " + jsonData[4].timeframes.weekly.previous + "hrs";
     document.getElementById("selfCurrent").textContent = jsonData[5].timeframes.weekly.current + "hrs";
     document.getElementById("selfPrev").textContent = "Last week - " + jsonData[5].timeframes.weekly.previous + "hrs";
+    dailyBtn.disabled = false;
+    weekBtn.disabled = true;
+    monthBtn.disabled = false;
 });
 
 monthBtn.addEventListener("click", function(e){
@@ -47,6 +53,9 @@ monthBtn.addEventListener("click", function(e){
     document.getElementById("socialPrev").textContent = "Last month - " + jsonData[4].timeframes.monthly.previous + "hrs";
     document.getElementById("selfCurrent").textContent = jsonData[5].timeframes.monthly.current + "hrs";
     document.getElementById("selfPrev").textContent = "Last month - " + jsonData[5].timeframes.monthly.previous + "hrs";
+    dailyBtn.disabled = false;
+    weekBtn.disabled = false;
+    monthBtn.disabled = true;
 });
 
 function fetchJSONData(){

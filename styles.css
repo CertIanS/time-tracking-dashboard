@@ -14,14 +14,17 @@ p, a{
 }
 
 .person{
-    padding-bottom: 10px;
     grid-row-start: 1;
     grid-row-end: 3;
 }
 
 .person img{
     border-radius: 50%;
-    border: 6px solid white;
+    border: 3px solid white;
+}
+
+.person button{
+    padding: 10px;
 }
 
 .person, .work, .play, .study, .exercise, .social, .selfCare{
@@ -90,9 +93,27 @@ p, a{
     color: hsl(235, 45%, 61%);
 }
 
-#dailyButton:hover, #weeklyButton:hover, #monthlyButton:hover{
+#dailyButton:hover, #dailyButton:disabled, #weeklyButton:hover, #weeklyButton:disabled, #monthlyButton:hover, #monthlyButton:disabled{
     color: white;
     cursor: pointer;
+}
+
+#reportFor{
+    color: hsl(236, 100%, 87%);
+}
+
+#personName{
+    font-size: 25px;
+    color: white;
+    font-weight: 100;
+}
+
+@media (max-width: 48em){
+    .personTitle{
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media (min-width: 48em){

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:wght@300..500&display=swap" rel="stylesheet">
   <link href="./styles.css" rel="stylesheet">
   <script defer src="./main.js"></script>
   
@@ -15,11 +15,11 @@
   <div class="container">
     <div class="person">
       <div class="personTitle">
-        <img src="images/image-jeremy.png"/>
-        <p>Report for</p>
-        <p>Jeremy Robson</p>
+        <img src="images/image-jeremy.png" width="75px" height="75px"/>
+        <p id="reportFor">Report for<br>
+        <span id="personName">Jeremy Robson</span></p>
       </div>
-      <button id="dailyButton">Daily</button>
+      <button id="dailyButton" disabled>Daily</button>
       <button id="weeklyButton">Weekly</button>
       <button id="monthlyButton">Monthly</button>
     </div>
