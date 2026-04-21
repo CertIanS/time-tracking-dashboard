@@ -4,10 +4,6 @@ body{
     color: white;
 }
 
-p, a{
-    padding: 10px;
-}
-
 .container{
     display: flex;
     flex-direction: column;
@@ -18,13 +14,18 @@ p, a{
     grid-row-end: 3;
 }
 
+.person p{
+    padding: 10px;
+}
+
 .person img{
     border-radius: 50%;
     border: 3px solid white;
 }
 
 .person button{
-    padding: 10px;
+    padding: 30px;
+    font-size: 20px;
 }
 
 .person, .work, .play, .study, .exercise, .social, .selfCare{
@@ -36,6 +37,10 @@ p, a{
 .personTitle{
     background-color: hsl(246, 80%, 60%);
     border-radius: 20px;
+}
+
+.title{
+    font-size: 20px;
 }
 
 .work{
@@ -86,6 +91,14 @@ p, a{
     cursor: pointer;
 }
 
+#workPrev, #playPrev, #studyPrev, #exercisePrev, #socialPrev, #selfPrev{
+    color: hsl(236, 100%, 87%);
+}
+
+#workCurrent, #playCurrent, #studyCurrent, #exerciseCurr, #socialCurr, #selfCurrent{
+    font-size: 30px;
+}
+
 #dailyButton, #weeklyButton, #monthlyButton{
     background: transparent;
     border: none;
@@ -108,6 +121,11 @@ p, a{
     font-weight: 100;
 }
 
+#buttons{
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 48em){
     .personTitle{
         padding: 20px;
@@ -120,5 +138,9 @@ p, a{
     .container{
         display: grid;
         grid-template-columns: auto auto auto auto;
+    }
+
+    #workCurrent, #playCurrent, #studyCurrent, #exerciseCurr, #socialCurr, #selfCurrent{
+        font-size: 50px;
     }
 }
