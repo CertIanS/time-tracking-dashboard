@@ -163,6 +163,10 @@ body{
     }
 
     #workCurrent, #playCurrent, #studyCurrent, #exerciseCurr, #socialCurr, #selfCurrent{
-        font-size: 50px;
+        font-size: 45px;
+    }
+
+    #workPrev, #playPrev, #studyPrev, #exercisePrev, #socialPrev, #selfPrev{
+        padding-top: 25px;
     }
 }
