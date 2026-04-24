@@ -41,6 +41,7 @@ body{
 .person img{
     border-radius: 50%;
     border: 3px solid white;
+    margin: 5px;
 }
 
 .person button{
@@ -159,7 +160,21 @@ body{
 @media (min-width: 48em){
     .container{
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .person, .work, .play, .study, .exercise, .social, .selfCare{
+        min-width: 90%;
+    }
+
+    .person button{
+        padding: 20px;
+    }
+
+    .personTitle{
+        height: 350px;
     }
 
     #workCurrent, #playCurrent, #studyCurrent, #exerciseCurr, #socialCurr, #selfCurrent{
@@ -168,5 +183,11 @@ body{
 
     #workPrev, #playPrev, #studyPrev, #exercisePrev, #socialPrev, #selfPrev{
         padding-top: 25px;
+    }
+
+    #buttons{
+        display: flex;
+        flex-direction: column;
+        height: 200px;
     }
 }
