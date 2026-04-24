@@ -4,6 +4,11 @@ body{
     color: white;
 }
 
+span{
+    display: flex;
+    align-items: center;
+}
+
 .dots{
     font-size: 40px;
     color: hsl(236, 100%, 87%);
@@ -14,14 +19,18 @@ body{
     color: white;
 }
 
-.leftInfo{
+/*.leftInfo{
     text-align: left;
     width: 50%;
 }
-
 .rightInfo{
     text-align: right;
     width: 50%;
+}*/
+.topInfo, .botInfo{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .container{
@@ -106,7 +115,8 @@ body{
     padding: 10px;
     margin-top: 55px;
     white-space: nowrap;
-    display: flex;
+    /*To be removed*/
+    /*display: flex;*/
 }
 
 #workInfo:hover, #playInfo:hover, #studyInfo:hover, #exerciseInfo:hover, #socialInfo:hover, #selfInfo:hover{
@@ -158,6 +168,10 @@ body{
 }
 
 @media (min-width: 48em){
+    body{
+        margin: 70px;
+    }
+
     .container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -170,11 +184,16 @@ body{
     }
 
     .person button{
-        padding: 20px;
+        padding: 15px;
     }
 
     .personTitle{
         height: 350px;
+    }
+
+    .botInfo{
+        display: block;
+        width: 100%;
     }
 
     #workCurrent, #playCurrent, #studyCurrent, #exerciseCurr, #socialCurr, #selfCurrent{
@@ -188,6 +207,6 @@ body{
     #buttons{
         display: flex;
         flex-direction: column;
-        height: 200px;
+        height: 150px;
     }
 }
