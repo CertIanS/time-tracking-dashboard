@@ -140,7 +140,7 @@ span{
     cursor: pointer;
 }
 
-#workCurrent, #playCurrent, #studyCurrent, #exerciseCurr, #socialCurr, #selfCurrent{
+#workCurrent, #playCurrent, #studyCurrent, #exerciseCurrent, #socialCurrent, #selfCurrent{
     font-size: 35px;
     font-weight: lighter;
 }
@@ -212,7 +212,7 @@ span{
         margin: 15px;
     }
 
-    #workCurrent, #playCurrent, #studyCurrent, #exerciseCurr, #socialCurr, #selfCurrent{
+    #workCurrent, #playCurrent, #studyCurrent, #exerciseCurrent, #socialCurrent, #selfCurrent{
         font-size: 55px;
         padding-top: 20px;
     }
