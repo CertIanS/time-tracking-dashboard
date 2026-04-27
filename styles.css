@@ -9,6 +9,12 @@ span{
     align-items: center;
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .dots{
     font-weight: bold;
     font-size: 35px;
@@ -23,12 +29,6 @@ span{
     display: flex;
     width: 100%;
     justify-content: space-between;
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .person{
@@ -52,16 +52,16 @@ span{
     width: 40%;
 }
 
-.person, .work, .play, .study, .exercise, .social, .selfCare{
-    background-color: hsl(235, 46%, 20%);
-    border-radius: 20px;
-    margin: 10px;
-    width: 25em;
-}
-
 .personTitle{
     background-color: hsl(246, 80%, 60%);
     border-radius: 20px;
+}
+
+.person, .work, .play, .study, .exercise, .social, .selfCare{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 20px;
+    margin: 15px;
+    width: 24em;
 }
 
 .title{
@@ -70,38 +70,61 @@ span{
 
 .work{
     background-color: hsl(15, 100%, 70%);
-    background-image: url("images/icon-work.svg");
+    background-image: url("./images/icon-work.svg");
     background-repeat: no-repeat;
+    background-position: right top;
 }
 
 .play{
     background-color: hsl(195, 74%, 62%);
-    background-image: url("images/icon-play.svg");
+    background-image: url("./images/icon-play.svg");
     background-repeat: no-repeat;
+    background-position: right top;
 }
 
 .study{
     background-color: hsl(348, 100%, 68%);
-    background-image: url("images/icon-study.svg");
+    background-image: url("./images/icon-study.svg");
     background-repeat: no-repeat;
+    background-position: right top;
 }
 
 .exercise{
     background-color: hsl(145, 58%, 55%);
-    background-image: url("images/icon-exercise.svg");
+    background-image: url("./images/icon-exercise.svg");
     background-repeat: no-repeat;
+    background-position: right top;
 }
 
 .social{
     background-color: hsl(264, 64%, 52%);
-    background-image: url("images/icon-social.svg");
+    background-image: url("./images/icon-social.svg");
     background-repeat: no-repeat;
+    background-position: right top;
 }
 
 .selfCare{
     background-color: hsl(43, 84%, 65%);
-    background-image: url("images/icon-self-care.svg");
+    background-image: url("./images/icon-self-care.svg");
     background-repeat: no-repeat;
+    background-position: right top;
+}
+
+#reportFor{
+    color: hsl(236, 100%, 87%);
+    margin-top: 7px;
+}
+
+#personName{
+    font-size: 25px;
+    color: white;
+    font-weight: 100;
+    margin-top: 5px;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
 }
 
 #workInfo, #playInfo, #studyInfo, #exerciseInfo, #socialInfo, #selfInfo{
@@ -117,13 +140,13 @@ span{
     cursor: pointer;
 }
 
-#workPrev, #playPrev, #studyPrev, #exercisePrev, #socialPrev, #selfPrev{
-    color: hsl(236, 100%, 87%);
+#workCurrent, #playCurrent, #studyCurrent, #exerciseCurr, #socialCurr, #selfCurrent{
+    font-size: 35px;
+    font-weight: lighter;
 }
 
-#workCurrent, #playCurrent, #studyCurrent, #exerciseCurr, #socialCurr, #selfCurrent{
-    font-size: 40px;
-    font-weight: lighter;
+#workPrev, #playPrev, #studyPrev, #exercisePrev, #socialPrev, #selfPrev{
+    color: hsl(236, 100%, 87%);
 }
 
 #dailyButton, #weeklyButton, #monthlyButton{
@@ -138,22 +161,7 @@ span{
     cursor: pointer;
 }
 
-#reportFor{
-    color: hsl(236, 100%, 87%);
-}
-
-#personName{
-    font-size: 25px;
-    color: white;
-    font-weight: 100;
-}
-
-#buttons{
-    display: flex;
-    justify-content: center;
-}
-
-@media (max-width: 48em){
+@media (max-width: 50em){
     .personTitle{
         padding: 20px;
         display: flex;
@@ -161,7 +169,7 @@ span{
     }
 }
 
-@media (min-width: 48em){
+@media (min-width: 50em){
     body{
         margin: 70px;
         align-items: center;
@@ -171,11 +179,7 @@ span{
     .container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        width: 85%;
-    }
-
-    .person, .work, .play, .study, .exercise, .social, .selfCare{
-        width: 92%;
+        max-width: 85%;
     }
 
     .person button{
@@ -184,8 +188,12 @@ span{
     }
 
     .personTitle{
-        height: 305px;
+        height: 320px;
         padding: 25px;
+    }
+
+    .person, .work, .play, .study, .exercise, .social, .selfCare{
+        width: 92%;
     }
 
     .botInfo{
@@ -197,19 +205,19 @@ span{
         font-size: 40px;
     }
 
-    #workCurrent, #playCurrent, #studyCurrent, #exerciseCurr, #socialCurr, #selfCurrent{
-        font-size: 50px;
-        padding-top: 20px;
-    }
-
-    #workPrev, #playPrev, #studyPrev, #exercisePrev, #socialPrev, #selfPrev{
-        padding-top: 5px;
-    }
-
     #buttons{
         display: flex;
         flex-direction: column;
         height: 150px;
         margin: 15px;
+    }
+
+    #workCurrent, #playCurrent, #studyCurrent, #exerciseCurr, #socialCurr, #selfCurrent{
+        font-size: 55px;
+        padding-top: 20px;
+    }
+
+    #workPrev, #playPrev, #studyPrev, #exercisePrev, #socialPrev, #selfPrev{
+        padding-top: 5px;
     }
 }
