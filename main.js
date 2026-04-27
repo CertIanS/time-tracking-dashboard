@@ -4,7 +4,6 @@ var monthBtn = document.getElementById("monthlyButton");
 var jsonData = null;
 
 dailyBtn.addEventListener("click", function(e){
-    //document.getElementById("workCurrent").textContent = "5hrs";
     document.getElementById("workCurrent").textContent = jsonData[0].timeframes.daily.current + "hrs";
     document.getElementById("workPrev").textContent = "Yesterday - " + jsonData[0].timeframes.daily.previous + "hrs";
     document.getElementById("playCurrent").textContent = jsonData[1].timeframes.daily.current + "hr";

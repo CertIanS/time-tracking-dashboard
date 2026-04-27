@@ -161,7 +161,7 @@ span{
     cursor: pointer;
 }
 
-@media (max-width: 50em){
+@media (max-width: 70em){
     .personTitle{
         padding: 20px;
         display: flex;
@@ -169,7 +169,7 @@ span{
     }
 }
 
-@media (min-width: 50em){
+@media (min-width: 70em){
     body{
         margin: 70px;
         align-items: center;
