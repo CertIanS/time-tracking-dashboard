@@ -123,6 +123,7 @@ span{
 
 #workCurrent, #playCurrent, #studyCurrent, #exerciseCurr, #socialCurr, #selfCurrent{
     font-size: 40px;
+    font-weight: lighter;
 }
 
 #dailyButton, #weeklyButton, #monthlyButton{
@@ -163,13 +164,14 @@ span{
 @media (min-width: 48em){
     body{
         margin: 70px;
+        align-items: center;
+        justify-items: center;
     }
 
     .container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        align-items: center;
-        justify-items: center;
+        width: 85%;
     }
 
     .person, .work, .play, .study, .exercise, .social, .selfCare{
@@ -182,7 +184,8 @@ span{
     }
 
     .personTitle{
-        height: 375px;
+        height: 305px;
+        padding: 25px;
     }
 
     .botInfo{
@@ -190,17 +193,23 @@ span{
         width: 100%;
     }
 
+    #personName{
+        font-size: 40px;
+    }
+
     #workCurrent, #playCurrent, #studyCurrent, #exerciseCurr, #socialCurr, #selfCurrent{
-        font-size: 45px;
+        font-size: 50px;
+        padding-top: 20px;
     }
 
     #workPrev, #playPrev, #studyPrev, #exercisePrev, #socialPrev, #selfPrev{
-        padding-top: 25px;
+        padding-top: 5px;
     }
 
     #buttons{
         display: flex;
         flex-direction: column;
         height: 150px;
+        margin: 15px;
     }
 }
