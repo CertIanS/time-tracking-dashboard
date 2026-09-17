@@ -9,10 +9,6 @@ span{
     align-items: center;
 }
 
-button:hover{
-    cursor: pointer;
-}
-
 .container{
     display: flex;
     flex-direction: column;
@@ -162,6 +158,14 @@ button:hover{
 
 #dailyButton:hover, #dailyButton:disabled, #weeklyButton:hover, #weeklyButton:disabled, #monthlyButton:hover, #monthlyButton:disabled{
     color: white;
+}
+
+#dailyButton:hover, #weeklyButton:hover, #monthlyButton:hover{
+    cursor: pointer;
+}
+
+#dailyButton:disabled, #weeklyButton:disabled, #monthlyButton:disabled{
+    cursor: default;
 }
 
 @media (max-width: 70em){
