@@ -1,5 +1,5 @@
 body{
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     background-color: hsl(226, 43%, 10%);
     color: white;
 }
@@ -7,6 +7,10 @@ body{
 span{
     display: flex;
     align-items: center;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 .container{
@@ -152,13 +156,12 @@ span{
 #dailyButton, #weeklyButton, #monthlyButton{
     background: transparent;
     border: none;
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     color: hsl(235, 45%, 61%);
 }
 
 #dailyButton:hover, #dailyButton:disabled, #weeklyButton:hover, #weeklyButton:disabled, #monthlyButton:hover, #monthlyButton:disabled{
     color: white;
-    cursor: pointer;
 }
 
 @media (max-width: 70em){
